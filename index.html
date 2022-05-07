@@ -148,7 +148,7 @@
             });
 
             map.addLayer({
-                'id': 'basemap',
+                'id': 'tile1',
                 'type': 'raster',
                 'layout': {
                     'visibility': 'none'
@@ -157,7 +157,7 @@
             });
             
             map.addLayer({
-                'id': 'cushion_data',
+                'id': 'tile2',
                 'type': 'raster',
                 'layout': {
                     'visibility': 'none'
@@ -166,7 +166,7 @@
             });
             
            map.addLayer({
-                'id': 'Crash_cushion',
+                'id': 'tile3',
                 'type': 'raster',
                 'layout': {
                     'visibility': 'none'
@@ -175,7 +175,7 @@
             });
             
            map.addLayer({
-                'id': 'UW',
+                'id': 'tile4',
                 'type': 'raster',
                 'layout': {
                     'visibility': 'none'
@@ -189,12 +189,12 @@
         // After the last frame rendered before the map enters an "idle" state.
         map.on('idle', () => {
             // If these two layers were not added to the map, abort
-        if (!map.getLayer('basemap', 'cushion_data', 'Crash_cushion', 'UW')) {
+        if (!map.getLayer('tile1', 'tile2', 'tile3', 'tile4')) {
                 return;
             }111
 
             // Enumerate ids of the layers.
-            const toggleableLayerIds = ['basemap', 'cushion_data', 'Crash_cushion', 'UW'];
+            const toggleableLayerIds = ['tile1', 'tile2', 'tile3', 'tile4'];
 
             // Set up the corresponding toggle button for each layer.
             for (const id of toggleableLayerIds) {
