@@ -189,7 +189,7 @@
         // After the last frame rendered before the map enters an "idle" state.
         map.on('idle', () => {
             // If these two layers were not added to the map, abort
-        if (!map.getLayer('tile1', 'tile2', 'tile3', 'tile4')) {
+        if (!map.getLayer('BaseMap', 'CushionData', 'crash_cushion', 'UW')) {
                 return;
             }
 
